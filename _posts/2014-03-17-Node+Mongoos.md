@@ -3,7 +3,7 @@ layout: post
 title: Node + Mongoose  基本使用 
 ---
 
-##. {{ page.title }}
+## {{ page.title }}
 
 ### 一.背景介绍
    Node + Mongoose  开发模式是目前流行web开始模式, 崛起的编程之星 Node 加上NoSql 中的王者MongoDB, 以及目前主流clound 平台对它们的无缝支持
@@ -11,5 +11,5 @@ title: Node + Mongoose  基本使用
 
 ### 二.使用实例
 
-   #### 1.  Up-front work
-   #### 2. 创建实例
+#### 1.  Up-front work
+#### 2. 创建实例
