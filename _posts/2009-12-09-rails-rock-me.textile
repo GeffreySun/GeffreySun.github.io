@@ -1,0 +1,19 @@
+---
+layout: post
+title: Rails Rock Me
+---
+
+h1. {{ page.title }}
+
+p(meta). 9 Dec 2009 - Beijing
+
+Since as a 7 years experienced Java developer, I have to admitted that the stuff that rock me this year is the Ruby language and the Rails framework. Here is the list:
+
+# In the construction of the project-portal within the company, "Redmine":http://www.redmine.org/ (a flexible project management web application. Written using Ruby on Rails) is a big win against the awkward "Liferay":http://www.liferay.com. We even think about replacing it for our commercial "JIRA":http://www.atlassian.com/software/jira/ instance which used for years in our issue tracking. 
+The winning factor is that the "Keep It Simple" philosophy being gone through the language, framework and the application.
+# Happily fixed a small web project written in Ruby on Rails by a novice team. Cut the LOC from 7600 to 5500 while bring significant feature & performance improvements.
+# Adopted the "Sonar":http://sonar.codehaus.org/ as the quality metrics tool for the company. Glad to cooperated with the Sonar team in JRuby on Rails. 
+# Following the "RailsCasts":http://railscasts.com/ and "Ruby5":http://ruby5.envylabs.com/ news keep me exciting about the community growth with the contribution from lots of clever guys here.
+# Learning Ruby by reading the Book named "The Well-Grounded Rubyist":http://www.manning.com/black2/ and scripted it in small tasks bring me back the joyful memory of learning programing in the early day.
+# "Github":http://github.com/ inspired me to dig deeper into the beauty of the open-source world and start "blogging like a hacker":http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html.
+# To be continue ...

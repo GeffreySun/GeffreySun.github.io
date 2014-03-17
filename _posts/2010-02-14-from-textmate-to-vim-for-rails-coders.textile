@@ -1,0 +1,60 @@
+---
+layout: post
+title: From TextMate to VIM for Rails Coders
+---
+
+h1. {{ page.title }}
+
+p(meta). 18 Feb 2010 - GuangXi, China
+
+In this post I will show you my experience of switching editor from TextMate to VIM for Rails developing. I will do a comparison with them in major aspects of coding efficiency. Hope it will help you choose the best editor fit for yourself. Your comments of either TextMate or VIM are all welcomed here. 
+
+When started coding in Rails, I chose TextMate as my editor because it seems amazing as showed in the fantastic "RailsCasts from Ryan Bate":http://railscasts.com.
+
+Indeed the journey ramping up the learning curve of Rails with TextMate was very delightful. I continued using it in several projects and became familiar with it until one day I had to give off my deer Mac Book and fall back to a Windows laptop. During the period waiting for my next Mac, I need to write Rails code without TextMate.
+
+Developing Rails on Windows is a miserable experience for me. Therefore I rather chose to SSH my remote Linux box with PUTTY instead of using any windows GUI IDE. I used to write script in VI on Linux but for daily rails coding, VIM with some plugins would be better.
+
+After I switched from TextMate, I found myself even more efficient and comfortable working with VIM at some points and still miss some stuff in TextMate. Here are the major differences I could count: 
+
+h2. The mouse is not needed anymore.
+
+If you are a keyboard shortcut lover, I bet you don't like shifting your hand between the keyboard and mouse while coding. Believe it or not, relocating the finger position, finding your mouse on desk and pointer on screen may be not a time-killer but it would distracts your attention all the time. While in TextMate, the shortcut system is powerful but still not powerful enough to support your work without the help from your Mickey. 
+
+But in VIM. After get used to the navigation keys, you will found it very efficient and do not need the mouse anymore. Here are some examples:
+* Locate your cursor: Using keys like @hjklwb$^@ to move your cursor. Pain at the beginning but works pretty good after you get familiar with them.
+* Go there quicker: Jumping to the line using @***G@ or Jumping to the word using @/XXX@.
+* Find the previous/next occurrence of current word: Just type @#@ or @*@. Simpler than @CMD+E@ plus @CMD+G@ in TextMate. 
+* Even the Columnar editing works pretty good with Block-wise visual mode activated by @CTRL+v@. Good enough comparing the @ALT+Drag@ in TextMate.
+
+h2. Project Drawer: Miss it sometimes but not much.
+
+When you just involved in a project, the tree opened in the project drawer could do you a favor for showing the structure clearly. But after you dig into the project deeper, you will find the Project Tree became more and more useless. Usually I close the drawer and using @CMD+T@ to open files quickly. In VIM, I installed a tree plugin called "NERDtree":http://www.vim.org/scripts/script.php?script_id=1658, but frankly I don't use it very often. With the "Rails plugin":http://www.vim.org/scripts/script.php?script_id=1567. I used the file navigation commands below(Press tab when typing those command save a lot of time):
+* @:Rmodel@,@:Rcontroller@,@:Rview@,@:Rmigration@ for jumping to the file when the name came into my head.
+* @:A@,@:R@ for jumping to the 'Alternative' or 'Relative' file of current file. Just like @ALT+CMD+DOWN@ in TextMate.
+* Want to open the file named under the cursor, just type @gf@.
+
+h2. File tabs: Would not miss it after get used to Window-splitting.
+
+As for the file tabs. I used it heavily in TextMate and get used to switching tabs using @CMD+number@. The version of VIM that I am using(7.2) also contain the support for tab browsing. But It still not work as good as TextMate does. But start to getting more and more familiar with the windows splitting function in VIM, I do not miss the tab browsing so much. Since the major switching is the Model/UnitTest or Controller/View, and that will be perfectly done by windows splitting.
+
+h2. Project searching: Still finding a better way. 
+
+While I writing rails code,especially when debugging In TextMate,I used the Project searching @CMD+SHIFT+F@ quite often. But in VIM, I have to fall back to the shell command like @find . -type f|grep rb$|xargs grep xxx@. Do you have any suggestion for it?
+
+h2. Snippets: The Killer feature that I miss the most. 
+
+I thought the Snippets come with different bundles as the killer feature of TextMate. Although there is a similar plugin called "SinpMate":http://www.vim.org/scripts/script.php?script_id=2540 available for VIM, But when it comes to the shortcut name that you are not familiar with, TextMate provides you a quick way @CTRL+CMD+T@ for hint. I REALLY expect that this could come into the VIM plugin.
+
+h2. Conclusion
+
+There are still a lot of detail differences between these two excellent editors that I did not list here. But the overall experience for me of switching from TextMate to VIM is exciting. Especially imagine that in the near future, I can bring out my iPad + Wireless Keyboard and go on hacking code quickly with TouchTerm(A SSH client App for iPhone) + VIM... Doesn't it cool enough? Any comments are welcomed here or tweet me "@zigzagchen":http://twitter.com/zigzagchen. 
+
+h2. Resource
+
+# "rails.vim":http://www.vim.org/scripts/script.php?script_id=1567 -- Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more#
+# "The NERDtree":http://www.vim.org/scripts/script.php?script_id=1658 -- A tree explorer plugin for navigating the filesystem.
+# "snipMate":http://www.vim.org/scripts/script.php?script_id=2540 -- TextMate-style snippets for Vim.
+# "Zigzag's .vim setting":http://github.com/zigzag/dotvim -- My VIM setting repository on GitHub.
+# "From TextMate to Vim":http://www.artfulcode.net/articles/from-textmate-to-vim/ -- Annother post in the same topic.
+# "Vim for TextMate Fans":http://alexyoung.org/2006/10/22/vim-for-textmate-fans/ -- Same topic with a screenshoot

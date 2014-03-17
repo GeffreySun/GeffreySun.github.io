@@ -1,0 +1,32 @@
+---
+layout: post
+title: Ready_for_i18n 0.3 released -- support for non-english projects.
+---
+
+h1. {{ page.title }}
+
+p(meta). 31 Dec 2009 - Beijing
+
+In the initial version of ready_for_i18n("Introduced here":http://zigzag.github.com/2009/12/17/get-your-local-rails-application-ready-for-i18n.html), We had an assumption that the locale of your project to be extracted is English, therefore the key in the dictionary file can be just come from the literal word. But there are also so many non-english local projects that need to be internationalized. So we come out an idea to introduce a simple key-text mapping mechanism. Still simply using one command of @ready_for_i18n@ and follow these steps to get you non-english project ready for i18n.
+
+_(Assuming you are in the @app/views@ directory of your rails project.)_
+
+# Using @ready_for_i18n . --nokey > cn.txt@ to extract all text and label in your views.
+# Open the _cn.txt_ and go for "google translate":http://translate.google.com/ (or other tools you like or do it manually) then paste the result in a new file called _en.txt_ with the following cautions -- (Do NOT change anything in _cn.txt_ but you can change the translated en.txt just remember keeping the same line number of _en.txt_ with _cn.txt_).
+# Using @ready_for_i18n . . --keymap=cn.txt:en.txt > cn.yml@ Then all your views will be replaced to an i18ned version and the generated _cn.yml_ dictionary file will use the keys from _en.txt_ and values from _cn.txt_.
+
+That is it. It is a bit more steps than extracting the English project, but still simple enough, right?
+Besides, if you do not satisfied with the default simple key mapping for your English local project, you can also using this way to change you key mapping as your will.
+
+The "0.3 version of ready_for_i18n":http://www.gemcutter.org/gems/ready_for_i18n also contain some bug fixes and the following enhancements:
+
+* Support for a Dry run mode -- Just using one parameter for your view path, then @ready_for_i18n@ will not replace any of your view files but just generate an dictionary file to STDOUT. You can redirect this out to file as you want. 
+* Support a lazy-lookup(explained as the following screenshot-> clipped from "Rails i18n guide":http://guides.rubyonrails.org/i18n.html#looking-up-translations) extracting that will help you generate a more structured dictionary file. Just using @--dot@ options in the @ready_for_i18n@ command.
+
+!/images/lazy_lookup.png(lazy-lookup)!
+
+Well, Hope this tool will help you in the coming year! Looking forward to your comments.
+
+h1. Happy new year!
+
+

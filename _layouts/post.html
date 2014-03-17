@@ -1,9 +1,19 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
+<div id="post">
 {{ content }}
 </div>
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="disqus_thread"><h2>Comments</h2></div>
+<script type="text/javascript" src="http://disqus.com/forums/rubyonzigzag/embed.js"></script>
+<noscript><a href="http://disqus.com/forums/rubyonzigzag/?url=ref">View the discussion thread.</a></noscript>
