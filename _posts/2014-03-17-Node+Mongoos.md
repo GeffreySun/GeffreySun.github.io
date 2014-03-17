@@ -10,4 +10,5 @@ h1. {{ page.title }}
 使得部署简单便捷，本文旨在介绍Node 中如何使用Mongoose来操作mongoDB 进行增删改查的基本数据库操作.
 ### 二.使用实例
    #### 1.  Up-front work
+   
    #### 2. 创建实例
