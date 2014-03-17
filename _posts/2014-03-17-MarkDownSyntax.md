@@ -18,11 +18,11 @@ title: MarkDown Syntax
 ##5.代码区域
 行内代码使用反斜杠`表示。
 代码段落则是在每行文字前加4个空格或者1个缩进符表示。
-```javascript  
-  var ihubo = {  
-    nickName  : "草依山",  
-    site : "http://jser.me"  
-  }  
+```
+	var ihubo = {  
+		nickName  : "草依山",  
+		site : "http://jser.me"  
+	}  
 ```
 
 ##6.显示标题
